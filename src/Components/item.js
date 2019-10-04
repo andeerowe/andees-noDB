@@ -53,7 +53,7 @@ render () {
             ></input>
             <div>{description}</div>
             <button className="edit-delete" onClick={this.props.delete}>Delete</button>
-            <button className="edit-delete" onClick={() => this.update()}>Update</button>
+            <button className="edit-delete" onClick={this.update}>Update</button>
         </div>
         </div>)
         

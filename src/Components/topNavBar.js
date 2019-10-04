@@ -10,7 +10,7 @@ class TopNavBar extends Component {
     render (){
         return (
             <div className="img-container"><img id="profile-pic"alt="profile pic" src="https://images.wallpaperscraft.com/image/golden_retriever_dog_sits_blur_120469_3415x3415.jpg"></img> 
-            <div className="welcome">Welcome back, user!</div>
+            <div className="welcome">Welcome back, @user!</div>
             </div>
         )
     }
