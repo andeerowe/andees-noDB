@@ -1,7 +1,8 @@
 .top-nav-bar{
-  background-color: pink;
+  background-color: rgb(214, 196, 172);
+  border: 1px solid black;
   width: 100%;
-  height: 15vh;
+  height: 20vh;
   position:fixed;
   top: 0;
   padding: 10px 0 10px 20px;
@@ -11,8 +12,8 @@
 }
 
 .side-nav-bar{
-  /* background-image: url("https://cdn5.vectorstock.com/i/1000x1000/65/19/leopard-pattern-seamless-background-vector-13696519.jpg"); */
-  background-color: deeppink;
+  background-image: url("https://cdn5.vectorstock.com/i/1000x1000/65/19/leopard-pattern-seamless-background-vector-13696519.jpg");
+  /* background-color: deeppink; */
   height: 100vh;
   width: 19vw;
   position: fixed;
@@ -22,6 +23,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
+}
+.side-bar-title {
+  width:100%;
+  height: 50px;
+  border: 2px solid black;
+  font-size: 21px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-family: 'Caveat', cursive;
 }
 .input-container{
   /* background-color: red; */
@@ -34,8 +47,7 @@
 
 }
 .list-display{
-  background-color: lightblue;
-  /* height:100vh; */
+  /* background-color: lightblue; */
   width: 81vw;
   padding: 170px 0 0 0;
   display:flex;
@@ -45,15 +57,17 @@
 
 }
 .list-title {
-  font-size: 50px;
+  font-size: 60px;
   /* background-color: yellow; */
   height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  font-family: 'Satisfy', cursive;
+  margin: 0 0 25px 0;
 }
-img {
+#profile-pic {
   border-radius: 50%;
   max-width: 7%;
 }
@@ -78,13 +92,15 @@ button {
   width:50%;
   height: 50px;
   border: 2px solid black;
-  font-size: 19px;
+  font-size: 25px;
+  font-family: 'Caveat', cursive;
 }
 
 #edit-title {
   font-size: 12px;
   height: 22px;
   width: 100px;
+  /* font-family: 'Caveat', cursive; */
 }
 .item-container {
   /* background-color: midnightblue; */
@@ -92,8 +108,3 @@ button {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-/* .item-box {
-  height: 400px;
-  width:300px;
-  background-color: red;
-} */

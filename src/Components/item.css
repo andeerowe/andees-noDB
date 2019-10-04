@@ -5,4 +5,28 @@
     border: 2px solid black;
     border-radius: 5px;
     margin: 10px 0 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .edit-delete-container {
+      /* background-color: lightblue; */
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%
+  }
+
+  .edit-delete{
+      background-color: indianred;
+      font-size: 19px;
+      height: 30px;
+      width: 60px;
+  }
+
+  .item-img {
+      height: 100px;
+      width: 100px;
+      border: 1px black solid;
   }

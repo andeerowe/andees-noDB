@@ -2,10 +2,10 @@
 let list = [
     {
         id: 1,
-        img:"url", 
-        title: 'title',
-        price: 2,
-        description: "description"
+        img:"https://images.unsplash.com/photo-1510832303954-cc30cbf2b8db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80", 
+        title: 'Plane Tickets',
+        price: '$500',
+        description: "Plane tickets to ACK"
 
     },
     {
@@ -54,14 +54,14 @@ module.exports = {
 
     edit: (req,res) => {
         let {id} = req.params
-        let {newPrice} = req.body
-        console.log(newPrice)
+        let {price} = req.body
+        console.log(price)
         for(let i =0; i < list.length; i++){
             if(list[i].id === +id){
-                list[i].price = newPrice
+                list[i].price = price
             }
         }
-        
+        console.log(list)
         res.status(200).send(list)
         
     },

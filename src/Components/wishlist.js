@@ -16,13 +16,15 @@ class Wishlist extends Component {
         return(
             <div className="list-display">
 
-            <div className="list-title">Title <button id="edit-title">Edit</button></div>
+            <div className="list-title">My Wishlist <button id="edit-title">Edit</button></div>
             
             <div className="item-container">{this.props.list.map((element,index) => {
 
                 return <Item 
                 list={this.props.list}
                 listItem={element}
+                delete={this.props.delete}
+                edit={this.props.edit}
                 
                 />
             })}

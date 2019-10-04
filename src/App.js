@@ -14,8 +14,7 @@ class App extends Component {
       nameInput:'',
       priceInput: '',
       imgInput: '',
-      descInput: '',
-      // id: 3
+      descInput: ''
       
     }
   }
@@ -34,8 +33,7 @@ class App extends Component {
       title: this.state.nameInput,
       price: this.state.priceInput,
       img: this.state.imgInput,
-      description: this.state.descInput,
-      // id: this.state.id
+      description: this.state.descInput
     }
     axios.post('/api/list', body)
     .then(res => this.setState({
@@ -43,25 +41,38 @@ class App extends Component {
       nameInput: '',
       priceInput: '',
       imgInput: '',
-      descInput: '',
+      descInput: ''
     })
     
     )
     .catch(err => {console.log('lol no', err)})
   }
-  editPrice = () => {
-
+  editPrice = (id, price) => {
+    console.log(price)
+    axios.put(`/api/list/${id}`, {price})
+    .then(res => {
+      this.setState({
+        list: res.data
+      })
+    })
+    .catch(err => {console.log('nope.', err)})
   }
-  deleteItem = () => {
-
+  deleteItem = (id) => {
+    console.log(id)
+    axios.delete(`/api/list/${id}`)
+    .then(res => {
+      this.setState({
+        list: res.data
+      })
+    })
+    .catch(err => {
+      console.log('lol no', err)
+    })
   }
-
-  // itemNameHandler = (e) => {
-  //   console.log(this.state.nameInput)
-  // }
 
 
   render (){
+    console.log(this.state.priceInput)
     return(
       <div>
         <header className="top-nav-bar">
@@ -69,31 +80,31 @@ class App extends Component {
         </header>
         <div className="side-nav-bar">
         <div className="input-container">
-                <div>
-                    Add New Item:
+                <div className="side-bar-title">
+                    Add New Item Here!
                 </div>
                 <div>
-                    1<input 
+                    <input 
                       placeholder="Name of Item" 
                       value={this.state.nameInput}  
                       onChange={(e) => this.setState({nameInput: e.target.value})}/>
                 </div>
                 <div>
-                    2<input 
+                    <input 
                     placeholder="Price"
                     value={this.state.priceInput}
                     onChange={(e)=> this.setState({priceInput: e.target.value})}
                     />
                 </div>
                 <div>
-                   3<input 
+                   <input 
                    placeholder="Image URL"
                    value={this.state.imgInput}
                    onChange={(e) => this.setState({imgInput: e.target.value})}
                    />
                 </div>
                 <div>
-                    4<input 
+                    <input 
                     placeholder="Item Description..."
                     className="description" 
                     value={this.state.descInput}
@@ -105,7 +116,11 @@ class App extends Component {
             </div>
         </div>
         <div className="list-display-container">
-          <Wishlist list={this.state.list}/>
+          <Wishlist 
+            list={this.state.list}
+            delete={this.deleteItem}
+            edit={this.editPrice}
+            />
         </div>
       </div>
     )
