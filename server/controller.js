@@ -1,14 +1,6 @@
 // const list = require("./dataList.js")
 let list = [
     {
-        id: 0,
-        img:"url", 
-        title: 'title',
-        price: 2,
-        description: "description"
-
-    },
-    {
         id: 1,
         img:"url", 
         title: 'title',
@@ -23,6 +15,14 @@ let list = [
         price: 2,
         description: "description"
 
+    },
+    {
+        id: 3,
+        img:"url", 
+        title: 'title',
+        price: 2,
+        description: "description"
+
     }
 ]
 
@@ -32,11 +32,23 @@ module.exports = {
     },
 
     add: (req,res) => {
-        let {text} = req.body
-        let sample = {
-            text:text
+        let {title, price, img, description} = req.body
+
+        let id = 0
+
+        if(list.length === 0){
+            id = 1
+        } else {
+            id = list[list.length -1].id + 1
         }
-        list.push(sample)
+        let nextItem = {
+            title: title,
+            price: price,
+            img: img,
+            description: description,
+            id: id
+        }
+        list.push(nextItem)
         res.status(200).send(list)
     },
 
