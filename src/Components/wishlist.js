@@ -5,7 +5,9 @@ class Wishlist extends Component {
     constructor(){
         super()
 
-        this.state = {}
+        this.state = {
+            wishListTitle: "My Wishlist"
+        }
     }
 
     updateListTitle = () => {
@@ -16,7 +18,9 @@ class Wishlist extends Component {
         return(
             <div className="list-display">
 
-            <div className="list-title">My Wishlist <button id="edit-title">Edit</button></div>
+            <div className="list-title"> {this.state.wishListTitle} 
+            {/* <button id="edit-title">Edit</button> */}
+            </div>
             
             <div className="item-container">{this.props.list.map((element,index) => {
 

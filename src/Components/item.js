@@ -36,6 +36,7 @@ update = () => {
 
 render () {
     let {img, title, price, description} = this.props.listItem
+    console.log(this.props.listItem.id)
     return (
         
         <div>
@@ -52,7 +53,7 @@ render () {
 
             ></input>
             <div>{description}</div>
-            <button className="edit-delete" onClick={this.props.delete}>Delete</button>
+            <button className="edit-delete" onClick={() => this.props.delete(this.props.listItem.id)}>Delete</button>
             <button className="edit-delete" onClick={this.update}>Update</button>
         </div>
         </div>)
@@ -65,8 +66,8 @@ render () {
             <div>{price}</div>
             <div>{description}</div>
             <div className="edit-delete-container">
-            <button className="edit-delete" onClick={this.props.delete}>Delete</button>
-            <button className="edit-delete" onClick={() => this.edit()}>Edit</button>
+            <button className="edit-delete" onClick={() => this.props.delete(this.props.listItem.id)}>Purchase</button>
+            <button className="edit-delete" onClick={() => this.edit()}>Price Match</button>
             </div>
         
         </div>)}

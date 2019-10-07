@@ -38,7 +38,42 @@ let list = [
         title: "Fall Decorations",
         price: "$200.00",
         description: "Pumpkins, Candles, Etc"
-    }
+    },
+    {
+        id:6,
+        img:"https://images.unsplash.com/photo-1529892485617-25f63cd7b1e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        title: "Coffee",
+        price: "$5.00",
+        description: "Salted Caramel Flavor"
+    },
+    {
+        id:7,
+        img:"https://www.bathandbodyworks.com/dw/image/v2/BBDL_PRD/on/demandware.static/-/Sites-master-catalog/default/dw785e0cfc/crop/024498619_crop.jpg?sw=500&sh=600&sm=fit&q=75",
+        title: "Candle",
+        price: "$14.50",
+        description: "Scent: Fresh Balsam"
+    },
+    {
+        id:8,
+        img:"https://images.unsplash.com/photo-1501577316686-a5cbf6c1df7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        title: "Flowers",
+        price: "$10.00",
+        description: "Endless Summer Hydrangeas"
+    },
+    {
+        id:9,
+        img:"https://n.nordstrommedia.com/id/sr3/35843fee-d4f1-4b17-9572-fdd29fac7e1d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        title: "Lipstick",
+        price: "$39.00",
+        description: "YSL Color #44"
+    },
+    {
+        id:10,
+        img:"https://cdn.shopify.com/s/files/1/2344/3627/products/Amanda_Lindroth_Island_Wrapped_Glassware_Natural_Cup_Set_of_2_1200x1200.png?v=1562169065",
+        title: "Water Glasses",
+        price: "$200.00",
+        description: "Seagrass wrapped"
+    },
 ]
 
 module.exports = {
